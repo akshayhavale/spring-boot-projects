@@ -1,5 +1,8 @@
 package com.example.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +21,13 @@ public class FileApi {
 	private FileService fileService;
 
 	@PostMapping("/pdf/string")
-	public @ResponseBody String convertPdfToString(@RequestParam(value = "file", required = true) MultipartFile file) {
+	public @ResponseBody String convertPdfToString(@RequestParam(value = "file", required = true) MultipartFile file,
+			HttpServletRequest request, HttpServletResponse response) {
+		
+		String localAddr = request.getLocalAddr();
+		int localPort = request.getLocalPort();
+		
+		System.out.println(localAddr+":"+localPort);
 		return fileService.covertPdfToBase64String(file);
 	}
 
