@@ -1,0 +1,2 @@
+KeyNote :- Always opposite entity class table where id joins to table where maapedBy mentioned class Entity 
+OneToOne -> Person and Address
