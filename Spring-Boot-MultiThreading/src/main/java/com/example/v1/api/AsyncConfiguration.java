@@ -24,10 +24,10 @@ public class AsyncConfiguration {
 		return executor;
 	}
 
-	@Bean
-	public ExecutorService taskExecutorService() {
-		ExecutorService service = Executors.newFixedThreadPool(10);
-		return service;
-	}
+//	@Bean
+//	public ExecutorService taskExecutorService() {
+//		ExecutorService service = Executors.newFixedThreadPool(10);
+//		return service;
+//	}
 
 }
