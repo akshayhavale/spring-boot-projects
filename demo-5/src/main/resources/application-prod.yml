@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: prod
+
+  rabbitmq:
+    host: localhost-prod
+    port: 5672
+    username: guest-prod
+    password: guest-prod
+
+  data:
+    cassandra:
+      contact-points: localhost-prod
+      keyspace-name: ywc-inventory-prod
+      local-datacenter: datacenter1-prod
+      port: 9042
+      username: user-prod
+      password: pass-prod
+
+ywc:
+  rabbitmq:
+    queue: ywc_queue
+    exchange: ywc_exchange

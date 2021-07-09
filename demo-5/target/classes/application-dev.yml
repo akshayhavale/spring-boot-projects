@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: dev
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#  data:
+#    cassandra:
+#      contact-points: localhost
+#      keyspace-name: ywc_inventory
+#      local-datacenter: datacenter1
+#      port: 9042
+#      username: admin
+#      password: Admin@YwC
+
+  data:
+    cassandra:
+      contact-points: 
+      keyspace-name: 
+      local-datacenter: 
+      port: 
+      username: 
+      password: 
+      
+ywc:
+  rabbitmq:
+    queue: ywc_queue
+    exchange: ywc_exchange
+    
+logging:
+  level:
+    org.springframework.data.cassandra.core.cql.CqlTemplate: INFO

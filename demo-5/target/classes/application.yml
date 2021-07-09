@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: dev
+#  couchbase:
+#    bootstrap-hosts: localhost
+#    #bootstrap-hosts: couchbase-promoplan-dev.service.consul
+#    port: 8091
+#    bucket:
+#      name: product_inventory
+      
+
+    main:
+        web-environment: 'false'
+   
+secrets:
+  filePath: classpath:/config/secrets
+
+  datasource:
+    continue-on-error: true
+ 
+
+box:
+  auth_base_url: https://api.box.com
+  token_link: /oauth2/token
+  client_id: ykgbth2fknkt0wz5l6gwhixq95fyx255
+  client_secret: mXfNgyNDFriEP93rDNtqxSH5a6Md4zRg
+  code: qKVg3xGEOCkpr4zcMhOHskY2LYuFFnhc
+  grant_type: client_credentials
+
+ 
+
+server:
+  servlet:
+    context-path: /ywcProductInventory
+    session:
+      cookie:
+        http-only: true
+  port: 32514   
+
+feign:
+  client:
+    config: 
+         default:
+           loggerLevel: BASIC
+
+endpoints:
+  api1:
+    base-url: 
+    password:  
+    username:    
