@@ -1,0 +1,10 @@
+steps to create immutable object
+
+1) class should be mentioned final with all fields 
+2) by constructor it should intitalize the fields 
+3) No setter
+4) Only getter
+
+
+Note -> Wait What if that class has reference of Another class how you make that Immutable
+Ans :- Just use concept of cloning 

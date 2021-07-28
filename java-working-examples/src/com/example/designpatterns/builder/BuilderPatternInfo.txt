@@ -1,0 +1,21 @@
+Builder Pattern
+-------
+
+ Importance of Builder Class is 
+ -----------
+ 
+ -> For some context Factory and Abstract Factory Design Patterns are Ok, But How Fields Number Increases then it become complex to create object by factory
+ 
+ note -> What is Abstract Factory Design Pattern :- It is a one extra layer over Factory Design Pattern or Extra Abstraction over Factory Pattern
+ 
+ 
+ Steps To create Builder Class
+ -----
+ 
+ 1) Private keyword for class with private fields only getter not setter
+ 2) Private Constructor with input inner builder class
+ 3) inner class with public level
+ 4) same fields copy pasted 
+ 5) public Constructor that takes only mandatory fields
+ 6) Optional feilds to intialize use a method and return Builder
+ 7) buil() method with return new Laptop(builder);
